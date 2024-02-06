@@ -1,0 +1,1305 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+$widthContent: 1222px;
+$fontForUpperCaseText: Merriweather, serif;
+$fontForSimpleCaseText: "Golos Text", sans-serif;
+$colorTextAndBackground: rgb(245, 73, 50);
+
+.center {
+  padding-left: calc(50% - $widthContent / 2);
+  padding-right: calc(50% - $widthContent / 2);
+}
+
+.container {
+  width: 100%;
+  max-width: 1366px;
+  margin: 0 auto;
+  height: 600vh;
+}
+
+.header {
+  background: url(img/head_bg.jpg);
+  height: 700px;
+  max-width: 1366px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  gap: 62px;
+  &__logo {
+    padding-top: 26px;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    width: 542px;
+    &__htxt {
+      color: rgb(49, 49, 49);
+      font-family: $fontForUpperCaseText;
+      font-size: 60px;
+      font-weight: 400;
+      line-height: 110%;
+      letter-spacing: 0px;
+      text-align: left;
+      &__one {
+        padding-left: 91px;
+      }
+      &__two {
+        padding-left: 30px;
+      }
+    }
+    &__ltxt {
+      color: rgb(49, 49, 49);
+      font-family: $fontForSimpleCaseText;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 130%;
+      letter-spacing: 0px;
+      text-align: center;
+      margin-top: 24px;
+    }
+  }
+}
+
+.header__content__btns {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  .buttons {
+    width: 263px;
+    height: 72px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 66px;
+    font-family: $fontForSimpleCaseText;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 130%;
+    letter-spacing: 0px;
+    transition: all 0.5s;
+  }
+  &__leftBtn a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+  }
+  &__rightBtn a {
+    color: rgb(31, 31, 31);
+    text-decoration: none;
+  }
+  &__leftBtn {
+    background: rgb(31, 31, 31);
+    color: rgb(255, 255, 255);
+  }
+  &__rightBtn {
+    border: 2px solid rgb(31, 31, 31);
+    color: rgb(31, 31, 31);
+  }
+  &__leftBtn:hover,
+  .nav_arrow_right:hover {
+    background: rgb(251, 206, 81);
+    color: rgb(31, 31, 31);
+    cursor: pointer;
+  }
+  &__rightBtn:hover {
+    background: rgb(31, 31, 31);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+  }
+}
+
+.runText {
+  display: flex;
+  max-width: 1366px;
+  justify-content: flex-end;
+  align-items: center;
+  overflow: hidden;
+  background: $colorTextAndBackground;
+  box-sizing: border-box;
+  &__txt {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: rgb(255, 255, 255);
+    font-family: $fontForUpperCaseText;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 110%;
+    letter-spacing: 0px;
+    text-wrap: nowrap;
+    padding: 18px 12px 18px 12px;
+    animation: run-text linear 15s infinite;
+  }
+}
+
+@keyframes run-text {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.main {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main__top {
+  box-sizing: border-box;
+  max-width: 1320px;
+  display: flex;
+  gap: 64px;
+  margin-top: 80px;
+  &__txt {
+    font-family: $fontForUpperCaseText;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 135%;
+    letter-spacing: 0px;
+    text-align: left;
+    text-transform: uppercase;
+    padding: 27px 0px 27px 0px;
+    &__color {
+      color: $colorTextAndBackground;
+    }
+  }
+}
+
+.eee {
+  display: flex;
+}
+.main__infoAndPrice {
+  display: flex;
+  gap: 44px;
+  margin-top: 64px;
+  &__img {
+    background-image: url(img/men_play.png);
+
+    width: 474px;
+    height: 527px;
+    background-size: cover;
+  }
+  &__content {
+    display: inline-block;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+  &__content__txt {
+    font-family: $fontForUpperCaseText;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 135%;
+    letter-spacing: 0px;
+    text-align: left;
+    text-transform: uppercase;
+  }
+  &__content__txt span {
+    color: $colorTextAndBackground;
+  }
+  &__content__table {
+    margin-top: 60px;
+  }
+  &__content__ref {
+    margin-top: 48px;
+    color: rgb(48, 87, 162);
+    font-family: $fontForSimpleCaseText;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: left;
+  }
+}
+
+.table {
+  border-collapse: collapse;
+  border: 2px solid white;
+  td {
+    max-width: 400px;
+    text-wrap: nowrap;
+    text-align: center;
+    border: 1px solid rgb(208, 208, 208); /* Параметры рамки */
+    text-align: left;
+  }
+  .table_price {
+    margin-top: 32px;
+  }
+
+  .left-side_col {
+    color: rgb(49, 49, 49);
+    font-family: Golos Text;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: 0px;
+    opacity: 0.7;
+  }
+  .right-side_col {
+    color: rgb(49, 49, 49);
+    font-family: Golos Text;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: 0px;
+  }
+  &_thLeft {
+    padding: 0px 16px 16px 0px;
+  }
+  &_thRight {
+    padding: 0px 0px 16px 16px;
+  }
+  &_left-side {
+    padding: 16px 16px 16px 0px;
+  }
+  &_right-side {
+    padding-left: 16px;
+    padding-bottom: 16px;
+    padding-top: 16px;
+  }
+  &_tfLeft {
+    padding: 16px 0px 0px 0px;
+  }
+  &_tfRight {
+    padding: 16px 0px 0px 16px;
+    &_cross_out_txt {
+      text-decoration: line-through 2px red;
+      &__rightTxt {
+        padding-left: 12px;
+      }
+    }
+  }
+}
+
+.main_ataps {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 150px;
+  .ucase_txt {
+    color: rgb(49, 49, 49);
+    font-family: $fontForUpperCaseText;
+    font-size: 54px;
+    font-weight: 400;
+    line-height: 120%;
+    text-align: left;
+    text-transform: uppercase;
+  }
+  &__content__bottomLine {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  &__content__bottomLine small {
+    color: rgb(48, 87, 162);
+    font-family: $fontForSimpleCaseText;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 120%;
+  }
+}
+
+.main_ataps__alustration {
+  position: relative;
+  margin-top: 54px;
+  display: flex;
+  gap: 20px;
+  .plane_img {
+    position: absolute;
+    top: 167px;
+    left: 884px;
+  }
+  &__oneFourSix {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .alustration_card {
+    background-image: url(img/card_bg.jpg);
+    background-size: cover;
+    display: flex;
+    box-sizing: border-box;
+    gap: 16px;
+    padding: 20px;
+
+    &__text {
+      color: rgb(49, 49, 49);
+      font-family: $fontForSimpleCaseText;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 120%;
+      letter-spacing: 0px;
+      text-align: left;
+    }
+  }
+  .one_card {
+    max-width: 394px;
+    min-height: 112px;
+  }
+  .four_card,
+  .five_card {
+    max-width: 394px;
+    min-height: 112px;
+  }
+  .six_card {
+    max-height: 136px;
+    max-width: 394px;
+  }
+}
+
+.main_ataps__alustration_another_cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  &__twoThreeFive {
+    display: flex;
+    gap: 20px;
+  }
+  &__twoFive {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .two_card {
+    min-height: 112px;
+  }
+  .three_card {
+    max-width: 394px;
+  }
+  .seven_card {
+    max-height: 136px;
+    max-width: 803px;
+  }
+}
+
+.tournament_participants {
+  margin-top: 200px;
+  &__titleAndNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__title {
+      color: rgb(49, 49, 49);
+      font-family: $fontForUpperCaseText;
+      font-size: 54px;
+      font-weight: 400;
+      line-height: 120%;
+      text-transform: uppercase;
+    }
+    &__nav {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      &__page_count {
+        color: rgb(49, 49, 49);
+        font-family: $fontForSimpleCaseText;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 120%;
+      }
+    }
+    .light:hover circle {
+      fill: rgb(251, 206, 81);
+      cursor: pointer;
+    }
+  }
+
+  &__cards {
+    margin-top: 60px;
+    display: flex;
+    gap: 94px;
+    flex-wrap: wrap;
+    &__card {
+      transition: 1s all;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: center;
+      // flex-basis: 25%;
+      &__desc {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+        &__name {
+          color: rgb(49, 49, 49);
+          font-family: $fontForSimpleCaseText;
+          font-size: 24px;
+          font-weight: 600;
+          line-height: 120%;
+        }
+        &__status {
+          color: rgb(49, 49, 49);
+          font-family: $fontForSimpleCaseText;
+          font-size: 20px;
+          font-weight: 400;
+          line-height: 120%;
+          opacity: 0.6;
+        }
+      }
+      &__btn {
+        margin-top: 20px;
+        box-sizing: border-box;
+        border: 1px solid rgb(48, 87, 162);
+        border-radius: 62px;
+        color: rgb(48, 87, 162);
+        font-family: $fontForSimpleCaseText;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 120%;
+        padding: 12px;
+      }
+      &__btn:hover {
+        background: rgb(48, 87, 162);
+        color: rgb(255, 255, 255);
+      }
+    }
+  }
+}
+
+.footer {
+  margin-top: 140px;
+  max-width: 1366px;
+  &__txt {
+    max-width: 1366px;
+    padding: 40px 72px 72px 72px;
+    background: rgb(233, 222, 212);
+    color: rgb(49, 49, 49);
+    font-family: $fontForSimpleCaseText;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 120%;
+    opacity: 0.6;
+  }
+}
+
+.invisible {
+  display: none;
+}
+
+.disabled circle {
+  fill: rgb(214, 214, 214);
+}
+
+.disabled:hover circle {
+  fill: rgb(214, 214, 214) !important;
+  cursor: not-allowed !important;
+}
+
+.none {
+  display: none;
+}
+
+@media (min-width: 375px) and (max-width: 540px) {
+  .none {
+    display: none;
+  }
+
+  .mobile_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mobile_cards {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .mobile_plane {
+    position: relative;
+  }
+
+  .mb_card {
+    background-image: url(img/card_bg.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-top: 62px;
+    width: 335px;
+    height: 300px;
+    gap: 28px;
+  }
+
+  .mb_card_item {
+    display: flex;
+    align-items: center;
+    align-items: flex-start;
+    gap: 28px;
+  }
+
+  .mb_card p {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 120%;
+  }
+
+  .mb_card_hiden {
+    display: none;
+  }
+
+  .mobile_cards_nav {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 28px;
+  }
+
+  .mobile_cards_nav_progress {
+    display: flex;
+    gap: 6px;
+  }
+
+  .progress_bg circle {
+    fill: black;
+  }
+
+  .mobile_plane {
+    position: absolute;
+    top: -120px !important;
+    left: 35px !important;
+  }
+
+  .mobile_plane img {
+    width: 335px;
+  }
+
+  .light:hover circle {
+    fill: rgb(251, 206, 81);
+    cursor: pointer;
+  }
+
+  .disabled circle {
+    fill: rgb(214, 214, 214);
+  }
+
+  .disabled:hover circle {
+    fill: rgb(214, 214, 214) !important;
+    cursor: not-allowed !important;
+  }
+  //////////////////////////////////
+
+  .main_ataps__alustration {
+    margin-top: 148px;
+  }
+
+  .header {
+    padding-left: 20px;
+    height: 350px;
+    gap: 20px;
+  }
+
+  .header__content__htxt {
+    font-size: 17px;
+  }
+
+  .header__content__ltxt {
+    text-align: left;
+    font-size: 12px;
+    padding-left: 5px;
+  }
+
+  .header__content__btns {
+    justify-content: flex-start;
+    margin-top: 20px;
+    padding-left: 0px;
+    gap: 7px;
+  }
+  .buttons {
+    width: 85px !important;
+    height: 40px !important;
+    padding: 5px !important;
+    font-size: 10px !important;
+  }
+
+  .runText__txt {
+    padding: 8px 4px 8px 4px !important;
+    font-size: 10px;
+  }
+
+  .main {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .main__infoAndPrice__content__txt {
+    display: flex !important;
+    justify-content: center;
+  }
+
+  .main__infoAndPrice__content__table {
+    padding-left: 40px;
+  }
+
+  .main__top,
+  .main__infoAndPrice,
+  .main__infoAndPrice__content,
+  .main__infoAndPrice__content__txt {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .main__top__txt,
+  .main__infoAndPrice__content__txt {
+    font-size: 17px;
+    font-weight: 500;
+  }
+
+  .main__top__img img {
+    width: 350px;
+  }
+
+  .left-side_col,
+  .right-side_col {
+    font-size: 13px !important;
+  }
+
+  .main__infoAndPrice {
+    gap: 15px;
+  }
+  .main__infoAndPrice__img {
+    width: 300px;
+    background-size: cover !important;
+    background-position: center;
+  }
+  .main__infoAndPrice__content {
+    box-sizing: border-box;
+  }
+
+  .table_right-side,
+  .right-side_col {
+    padding-left: 5px !important;
+    font-size: 10px !important;
+  }
+
+  .table_tfRight_cross_out_txt {
+    font-size: 10px !important;
+  }
+
+  .table_left-side {
+    padding-right: 5px;
+    font-size: 11px !important;
+  }
+  .table_tfRight_cross_out_txt__rightTxt {
+    padding-left: 3px;
+    font-size: 13px;
+  }
+
+  .main__infoAndPrice__content__ref {
+    text-align: center;
+    font-size: 15px;
+  }
+
+  .ucase_txt,
+  .tournament_participants__titleAndNav__title {
+    font-size: 30px !important;
+  }
+
+  .tournament_participants__cards {
+    justify-content: center;
+  }
+
+  .main_ataps__content__topLine,
+  .main_ataps__content__bottomLine {
+    display: flex;
+    justify-content: center;
+  }
+
+  .main_ataps__alustration,
+  .main_ataps__alustration_another_cards__twoThreeFive {
+    flex-direction: column;
+  }
+
+  .main_ataps__content__bottomLine small {
+    font-size: 12px !important;
+  }
+
+  .alustration_card {
+    padding: 10px !important;
+    gap: 11px !important;
+  }
+
+  .alustration_card__text {
+    font-size: 15px !important;
+    font-weight: 300 !important;
+  }
+
+  .nav_arrows {
+    width: 25px;
+  }
+  .one_card,
+  .two_card,
+  .four_card,
+  .five_card {
+    height: 130px;
+  }
+  .seven_card,
+  .six_card {
+    height: 200px;
+  }
+
+  .tournament_participants {
+    margin-top: 35px;
+    &__titleAndNav {
+      justify-content: space-evenly;
+      &__title {
+        font-size: 20px !important;
+      }
+    }
+    &__cards {
+      margin-top: 60px;
+      display: flex;
+      gap: 20px;
+      flex-direction: column;
+      align-items: center;
+      &__card {
+        &__img img {
+          width: 300px;
+        }
+        &__desc {
+          margin-top: 20px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 6px;
+          &__name {
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 120%;
+          }
+          &__status {
+            font-size: 15px;
+            font-weight: 300;
+          }
+        }
+        &__btn {
+          margin-top: 10px;
+          border-radius: 62px;
+          font-size: 15px;
+          font-weight: 500;
+          padding: 10px;
+        }
+      }
+    }
+  }
+
+  .footer {
+    margin-top: 40px;
+  }
+
+  .footer__txt {
+    padding: 10px;
+    font-size: 12px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 540px) and (max-width: 720px) {
+  .header {
+    padding-left: 20px;
+    height: 350px;
+    gap: 20px;
+  }
+
+  .header__content__htxt {
+    font-size: 17px;
+  }
+
+  .header__content__ltxt {
+    text-align: left;
+    font-size: 12px;
+    padding-left: 5px;
+  }
+
+  .header__content__btns {
+    justify-content: flex-start;
+    padding-left: 10px;
+    gap: 10px;
+  }
+  .buttons {
+    width: 120px !important;
+    height: 30px !important;
+    padding: 5px !important;
+    font-size: 10px !important;
+  }
+
+  .runText__txt {
+    padding: 8px 4px 8px 4px !important;
+    font-size: 10px;
+  }
+
+  .main {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .main__infoAndPrice__content__txt {
+    display: flex !important;
+    justify-content: center;
+  }
+
+  .main__infoAndPrice__content__table {
+    padding-left: 40px;
+  }
+
+  .main__top,
+  .main__infoAndPrice,
+  .main__infoAndPrice__content,
+  .main__infoAndPrice__content__txt {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .main__top__txt,
+  .main__infoAndPrice__content__txt {
+    font-size: 17px;
+    font-weight: 500;
+  }
+
+  .main__top__img img {
+    width: 350px;
+  }
+
+  .left-side_col,
+  .right-side_col {
+    font-size: 13px !important;
+  }
+
+  .main__infoAndPrice {
+    gap: 15px;
+  }
+  .main__infoAndPrice__img {
+    width: 300px;
+    background-size: cover !important;
+    background-position: center;
+  }
+  .main__infoAndPrice__content {
+    box-sizing: border-box;
+  }
+
+  .main__infoAndPrice__content__ref {
+    font-size: 15px;
+  }
+
+  .ucase_txt,
+  .tournament_participants__titleAndNav__title {
+    font-size: 30px !important;
+  }
+
+  .main_ataps__content__topLine,
+  .main_ataps__content__bottomLine {
+    display: flex;
+    justify-content: center;
+  }
+
+  .main_ataps__alustration,
+  .main_ataps__alustration_another_cards__twoThreeFive {
+    flex-direction: column;
+  }
+
+  .main_ataps__content__bottomLine small {
+    font-size: 12px !important;
+  }
+
+  .alustration_card {
+    padding: 10px !important;
+    gap: 11px !important;
+  }
+
+  .alustration_card__text {
+    font-size: 15px !important;
+    font-weight: 300 !important;
+  }
+
+  .plane_img {
+    position: absolute;
+    top: 450px !important;
+    left: 150px !important;
+  }
+
+  .plane_img img {
+    width: 250px;
+  }
+
+  .nav_arrows {
+    width: 25px;
+  }
+  .one_card,
+  .two_card,
+  .four_card,
+  .five_card {
+    height: 130px;
+  }
+  .seven_card,
+  .six_card {
+    height: 200px;
+  }
+
+  .tournament_participants {
+    margin-top: 35px;
+    &__titleAndNav {
+      justify-content: space-evenly;
+      &__title {
+        font-size: 20px !important;
+      }
+    }
+    &__cards {
+      margin-top: 60px;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      &__card {
+        &__img img {
+          width: 100px;
+        }
+        &__desc {
+          margin-top: 20px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 6px;
+          &__name {
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 120%;
+          }
+          &__status {
+            font-size: 11px;
+            font-weight: 300;
+          }
+        }
+        &__btn {
+          margin-top: 10px;
+          border-radius: 62px;
+          font-size: 10px;
+          font-weight: 500;
+          padding: 4px;
+        }
+      }
+    }
+  }
+
+  .footer {
+    margin-top: 40px;
+  }
+
+  .footer__txt {
+    padding: 10px;
+    font-size: 12px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 720px) and (max-width: 960px) {
+  .header {
+    padding-left: 20px;
+    height: 500px;
+  }
+
+  .header__content__htxt {
+    font-size: 30px;
+  }
+
+  .header__content__ltxt {
+    text-align: left;
+    font-size: 13px;
+    padding-left: 10px;
+  }
+
+  .header__content__btns {
+    justify-content: flex-start;
+    padding-left: 20px;
+    gap: 20px;
+  }
+  .buttons {
+    width: 150px !important;
+    height: 40px !important;
+    padding: 10px !important;
+    font-size: 11px !important;
+  }
+
+  .runText__txt {
+    padding: 12px 8px 12px 8px !important;
+    font-size: 20px;
+  }
+
+  .main {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .main__top__txt,
+  .main__infoAndPrice__content__txt {
+    font-size: 17px;
+    font-weight: 500;
+  }
+
+  .main__top__img img {
+    width: 350px;
+  }
+
+  .left-side_col,
+  .right-side_col {
+    font-size: 13px !important;
+  }
+
+  .main__infoAndPrice {
+    gap: 15px;
+  }
+  .main__infoAndPrice__img {
+    width: 300px;
+    background-size: cover !important;
+    background-position: center;
+  }
+  .main__infoAndPrice__content {
+    box-sizing: border-box;
+  }
+
+  .main__infoAndPrice__content__ref {
+    font-size: 15px;
+  }
+
+  .ucase_txt,
+  .tournament_participants__titleAndNav__title {
+    font-size: 30px !important;
+  }
+
+  .main_ataps__content__bottomLine small {
+    font-size: 12px !important;
+  }
+
+  .alustration_card {
+    padding: 10px !important;
+    gap: 11px !important;
+  }
+
+  .alustration_card__text {
+    font-size: 15px !important;
+    font-weight: 300 !important;
+  }
+
+  .plane_img {
+    position: absolute;
+    top: 150px !important;
+    left: 450px !important;
+  }
+
+  .plane_img img {
+    width: 250px;
+  }
+
+  .nav_arrows {
+    width: 25px;
+  }
+  .one_card,
+  .two_card,
+  .four_card,
+  .five_card {
+    height: 130px;
+  }
+  .seven_card,
+  .six_card {
+    height: 200px;
+  }
+
+  .tournament_participants {
+    &__cards {
+      margin-top: 60px;
+      display: flex;
+      gap: 70px;
+      flex-wrap: wrap;
+      &__card {
+        &__img img {
+          width: 160px;
+        }
+        &__desc {
+          margin-top: 20px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 6px;
+          &__name {
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 120%;
+          }
+          &__status {
+            font-size: 13px;
+            font-weight: 300;
+          }
+        }
+        &__btn {
+          margin-top: 10px;
+          border-radius: 62px;
+          font-size: 10px;
+          font-weight: 500;
+          padding: 4px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 800px) and (max-width: 960px) {
+  .plane_img {
+    position: absolute;
+    top: 150px !important;
+    left: 530px !important;
+  }
+
+  .plane_img img {
+    width: 250px;
+  }
+}
+
+@media (min-width: 960px) and (max-width: 1230px) {
+  .header {
+    padding-left: 20px;
+    height: 600px !important;
+  }
+
+  .header__content__htxt {
+    font-size: 40px;
+  }
+
+  .header__content__ltxt {
+    font-size: 15px;
+  }
+
+  .header__content__btns {
+    gap: 20px !important;
+    margin-top: 30px;
+    margin-left: 20px !important;
+    justify-content: flex-start;
+  }
+  .buttons {
+    width: 200px !important;
+    height: 50px !important;
+    padding: 10px !important;
+    font-size: 12px !important;
+  }
+
+  .main {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .main__top__txt,
+  .main__infoAndPrice__content__txt {
+    font-size: 25px;
+  }
+
+  .left-side_col,
+  .right-side_col {
+    font-size: 15px !important;
+  }
+
+  .ucase_txt,
+  .tournament_participants__titleAndNav__title {
+    font-size: 40px !important;
+  }
+
+  .main_ataps__content__bottomLine small {
+    font-size: 15px !important;
+  }
+
+  .alustration_card__text {
+    font-size: 15px !important;
+    font-weight: 300 !important;
+  }
+
+  .plane_img {
+    position: absolute;
+    top: 200px !important;
+    left: 680px !important;
+  }
+
+  .plane_img img {
+    width: 250px;
+  }
+
+  .nav_arrows {
+    width: 25px;
+  }
+
+  .six_card,
+  .seven_card {
+    height: 140px;
+  }
+
+  .tournament_participants {
+    &__cards {
+      margin-top: 60px;
+      display: flex;
+      gap: 94px;
+      flex-wrap: wrap;
+      &__card {
+        &__img img {
+          width: 220px;
+        }
+        &__desc {
+          margin-top: 20px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 6px;
+          &__name {
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 120%;
+          }
+          &__status {
+            font-size: 15px;
+            font-weight: 300;
+          }
+        }
+        &__btn {
+          margin-top: 10px;
+          border-radius: 62px;
+          font-size: 10px;
+          font-weight: 500;
+          padding: 4px;
+        }
+      }
+    }
+  }
+}
