@@ -55,6 +55,7 @@ $colorTextAndBackground: rgb(245, 73, 50);
   background-position: center;
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
   gap: 62px;
   &__logo {
     padding-top: 26px;
@@ -62,7 +63,7 @@ $colorTextAndBackground: rgb(245, 73, 50);
   &__content {
     display: flex;
     flex-direction: column;
-    width: 542px;
+    max-width: 542px;
     &__htxt {
       color: rgb(49, 49, 49);
       font-family: $fontForUpperCaseText;
@@ -79,6 +80,8 @@ $colorTextAndBackground: rgb(245, 73, 50);
       }
     }
     &__ltxt {
+      display: flex;
+      justify-content: center;
       color: rgb(49, 49, 49);
       font-family: $fontForSimpleCaseText;
       font-size: 18px;
@@ -94,7 +97,7 @@ $colorTextAndBackground: rgb(245, 73, 50);
 .header__content__btns {
   margin-top: 40px;
   display: flex;
-  justify-content: space-between;
+  gap: 50px;
   .buttons {
     width: 263px;
     height: 72px;
